@@ -28,6 +28,27 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        TextView myTextView=(TextView)
+                findViewById(R.id.textView2);
+        myTextView.setText("0");
+    }
+
+    public void buttonAdd(View v) {
+        TextView myTextView=(TextView)
+                findViewById(R.id.textView2);
+        String counterString = myTextView.getText().toString();
+        int num1 = Integer.parseInt(counterString);
+        num1 = num1 + 1;
+        myTextView.setText(String.valueOf(num1));
+    }
+
+    public void buttonSubtract(View v) {
+        TextView myTextView=(TextView)
+                findViewById(R.id.textView2);
+        String counterString = myTextView.getText().toString();
+        int num1 = Integer.parseInt(counterString);
+        num1 = num1 - 1;
+        myTextView.setText(String.valueOf(num1));
     }
 
     public void buttonOnClick(View v) {
@@ -53,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement .
+        //noinspection SimplifiableIfStatement ...
         if (id == R.id.action_settings) {
             return true;
         }
